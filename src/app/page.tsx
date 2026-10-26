@@ -92,7 +92,7 @@ export default async function Home() {
       <section className="py-24 text-center">
         <div className="wrap">
           <h2 className="text-4xl font-extrabold md:text-5xl">Ready to try OAK?</h2>
-          <p className="mx-auto mt-4 max-w-md text-mute">Order in a minute. Pay when it arrives.</p>
+          <p className="mx-auto mt-4 max-w-md text-mute">Your hair, held down. Order today.</p>
           <Link href="/shop" className="btn mt-8">Shop now</Link>
         </div>
       </section>

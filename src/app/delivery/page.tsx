@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import type { ReactNode } from "react";
+import { TELEGRAM } from "@/lib/config";
 
 export const metadata: Metadata = { title: "Delivery & FAQ" };
 
-const faqs = [
+const faqs: [string, ReactNode][] = [
   ["How does ordering work?", "Add products to your cart and place your order. We contact you by phone or Telegram to confirm, then ship it."],
   ["How do I pay?", "Cash on delivery. You pay the courier when your order arrives."],
   ["Where do you deliver?", "Anywhere in Cambodia, including all 25 provinces and Phnom Penh."],
@@ -11,7 +12,7 @@ const faqs = [
   ["How long does it take?", "Phnom Penh: same or next day. Provinces: usually 1 to 3 days."],
   ["How do I use the clay?", "Warm a small amount between your palms and work it through dry or towel-dried hair. Add more if you need it."],
   ["How do I use the powder?", "Sprinkle a little at the roots, then ruffle and shape. It works alone or under clay."],
-  ["Something is wrong with my order.", "Message us on Telegram or use the contact page and we’ll fix it."],
+  ["Something is wrong with my order.", <>Message us on <a href={`https://t.me/${TELEGRAM}`} target="_blank" rel="noreferrer" className="underline">Telegram</a> and we’ll fix it.</>],
 ];
 
 export default function Delivery() {
@@ -37,7 +38,7 @@ export default function Delivery() {
               </details>
             ))}
           </div>
-          <p className="mt-8 text-navy/70">Still stuck? <Link href="/contact" className="font-semibold underline">Contact us</Link>.</p>
+          <p className="mt-8 text-navy/70">Still stuck? <a href={`https://t.me/${TELEGRAM}`} target="_blank" rel="noreferrer" className="font-semibold underline">Contact us on Telegram</a>.</p>
         </div>
       </section>
     </>
