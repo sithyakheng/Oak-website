@@ -15,12 +15,12 @@ export default async function Home() {
 
   return (
     <>
-      <section className="relative overflow-hidden bg-[radial-gradient(ellipse_at_75%_50%,#1f3452_0,#0d1b2e_65%)]">
-        <Leaf className="pointer-events-none absolute -right-24 -top-10 h-[34rem] w-[34rem] opacity-[0.06]" stroke={1} />
+      <section className="home-hero relative overflow-hidden">
+        <Leaf className="pointer-events-none absolute -right-24 -top-10 h-[34rem] w-[34rem] text-oak opacity-[0.06]" stroke={1} />
         <div className="wrap grid items-center gap-8 py-20 md:grid-cols-2 md:py-28">
           <div>
             <p className="mb-5 inline-block rounded-full border border-navy-line px-4 py-1.5 text-xs">Made for Cambodia</p>
-            <h1 className="text-6xl font-extrabold leading-[0.92] tracking-tight md:text-8xl">Hold it<br />down.</h1>
+            <h1 className="text-6xl font-serif font-semibold leading-[0.92] tracking-tight md:text-8xl">Hold it<br />down.</h1>
             <p className="mt-6 max-w-sm text-mute">Strong hold and a matte finish. Hair clay and texture powder built to last the whole day.</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link href="/shop" className="btn">Shop now</Link>
@@ -36,7 +36,7 @@ export default async function Home() {
 
       <section className="light py-20">
         <div className="wrap">
-          <h2 className="mb-10 text-center text-3xl font-extrabold md:text-4xl">The lineup</h2>
+          <h2 className="mb-10 text-center text-3xl font-serif font-semibold tracking-tight md:text-4xl">The lineup</h2>
           <div className="grid gap-5 md:grid-cols-3">{products.map((p) => <ProductCard key={p.id} p={p} />)}</div>
         </div>
       </section>
@@ -51,7 +51,7 @@ export default async function Home() {
         <div className="wrap grid items-center gap-12 md:grid-cols-2">
           <div className="h-96 overflow-hidden rounded-2xl border border-navy-line"><ProductVisual p={clay} size="lg" /></div>
           <div>
-            <h2 className="text-4xl font-extrabold leading-tight md:text-5xl">The clay that holds.</h2>
+            <h2 className="text-4xl font-serif font-semibold leading-tight tracking-tight md:text-5xl">The clay that holds.</h2>
             <p className="mt-4 max-w-md text-mute">No crunch, no stiffness. A firm, natural look you can rework any time of day.</p>
             <div className="my-6 max-w-sm"><Meter hold={clay.hold} shine={clay.shine} /></div>
             <div className="flex gap-3">
@@ -65,14 +65,14 @@ export default async function Home() {
       <div className="overflow-hidden border-y border-navy-line py-5">
         <div className="marquee flex w-max gap-12 whitespace-nowrap font-wm text-lg text-mute">
           {Array.from({ length: 12 }).map((_, i) => (
-            <span key={i} className="flex items-center gap-12">We handle with care<Leaf className="h-5 w-5 text-silver" stroke={4} /></span>
+            <span key={i} className="flex items-center gap-12">We handle with care<Leaf className="h-5 w-5 text-oak" stroke={4} /></span>
           ))}
         </div>
       </div>
 
       <section className="light py-20">
         <div className="wrap">
-          <h2 className="mb-10 text-center text-3xl font-extrabold md:text-4xl">How to use it</h2>
+          <h2 className="mb-10 text-center text-3xl font-serif font-semibold tracking-tight md:text-4xl">How to use it</h2>
           <ol className="grid gap-5 md:grid-cols-3">
             {[
               ["Start dry", "Use on dry or towel-dried hair."],
@@ -81,7 +81,7 @@ export default async function Home() {
             ].map(([t, d], i) => (
               <li key={t} className="rounded-xl border border-cream-deep bg-white p-6">
                 <span className="font-wm text-sm text-navy/50">{i + 1}</span>
-                <h3 className="mt-2 text-lg font-bold">{t}</h3>
+                <h3 className="mt-2 text-lg font-serif font-semibold tracking-tight">{t}</h3>
                 <p className="mt-1 text-sm text-navy/65">{d}</p>
               </li>
             ))}
@@ -91,7 +91,7 @@ export default async function Home() {
 
       <section className="py-24 text-center">
         <div className="wrap">
-          <h2 className="text-4xl font-extrabold md:text-5xl">Ready to try OAK?</h2>
+          <h2 className="text-4xl font-serif font-semibold tracking-tight md:text-5xl">Ready to try OAK?</h2>
           <p className="mx-auto mt-4 max-w-md text-mute">Your hair, held down. Order today.</p>
           <Link href="/shop" className="btn mt-8">Shop now</Link>
         </div>

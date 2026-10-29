@@ -22,7 +22,7 @@ export default async function Admin() {
   return (
     <section className="wrap py-14">
       <div className="flex items-center justify-between">
-        <h1 className="text-3xl font-extrabold">Orders</h1>
+        <h1 className="text-3xl font-serif font-semibold tracking-tight">Orders</h1>
         <LogoutButton />
       </div>
       <p className="mt-2 text-sm text-mute">{list.length} orders · {money(revenue)} total (not cancelled)</p>

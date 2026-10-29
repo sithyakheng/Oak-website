@@ -4,13 +4,15 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        navy: { DEFAULT: "#0d1b2e", 2: "#14263d", line: "#2a3d58" },
-        silver: "#cfd6e0",
-        cream: { DEFAULT: "#efe9de", deep: "#d9d2c4" },
-        mute: "#8d9ab0",
+        navy: { DEFAULT: "#2b1d14", 2: "#382619", line: "#5a4230" },
+        silver: "#f3ead9",
+        oak: { DEFAULT: "#c08a50", dark: "#a8743f" },
+        cream: { DEFAULT: "#f3ead9", deep: "#e2d3ba" },
+        mute: "#b9a48c",
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
+        serif: ["Fraunces", "Georgia", "serif"],
         wm: ["Syncopate", "Arial", "sans-serif"],
       },
     },

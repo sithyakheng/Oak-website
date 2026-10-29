@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="border-t border-navy-line py-14 text-sm text-mute">
       <div className="wrap grid gap-10 md:grid-cols-3">
         <div>
-          <div className="flex items-center gap-3 text-silver"><Leaf /><Wordmark className="text-lg" /></div>
+          <div className="flex items-center gap-3 text-silver"><Leaf className="text-oak" /><Wordmark className="text-lg" /></div>
           <p className="mt-4 max-w-xs">Hair clay and texture powder, made for Cambodia. We handle with care.</p>
         </div>
         <div className="flex flex-col gap-2">

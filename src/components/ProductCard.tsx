@@ -10,7 +10,7 @@ export default function ProductCard({ p }: { p: Product }) {
       <Link href={`/shop/${p.slug}`} className="relative block h-56">
         <ProductVisual p={p} />
         <span className="absolute left-3 top-3 rounded-full bg-white px-3 py-1 text-[11px] font-semibold text-navy">{p.tag}</span>
-        {p.badge && <span className="absolute right-3 top-3 rounded-full bg-navy px-3 py-1 text-[11px] font-semibold text-silver">{p.badge}</span>}
+        {p.badge && <span className="absolute right-3 top-3 rounded-full bg-oak px-3 py-1 text-[11px] font-semibold text-cream">{p.badge}</span>}
       </Link>
       <div className="flex flex-1 flex-col gap-1 p-4">
         <Link href={`/shop/${p.slug}`} className="font-bold hover:underline">{p.name}</Link>

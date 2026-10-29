@@ -17,7 +17,7 @@ export default async function OrderPage({ params }: { params: { id: string } }) 
 
   return (
     <section className="wrap max-w-2xl py-20">
-      <h1 className="text-4xl font-extrabold">Thank you, {o.name}.</h1>
+      <h1 className="text-4xl font-serif font-semibold tracking-tight">Thank you, {o.name}.</h1>
       <p className="mt-3 text-mute">Your order is in. We’ll contact you on {o.phone} to confirm it before it ships. Pay cash when it arrives.</p>
       <div className="mt-10 rounded-xl border border-navy-line bg-navy-2 p-6 text-sm">
         <p className="mb-4 text-xs text-mute">Order {o.id.slice(0, 8)} · Status: {o.status}</p>

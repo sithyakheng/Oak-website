@@ -20,16 +20,16 @@ export default function Delivery() {
     <>
       <section className="py-20">
         <div className="wrap max-w-3xl">
-          <h1 className="text-5xl font-extrabold">Delivery & FAQ</h1>
+          <h1 className="text-5xl font-serif font-semibold tracking-tight">Delivery & FAQ</h1>
           <div className="mt-10 grid gap-5 md:grid-cols-2">
-            <div className="rounded-xl border border-navy-line bg-navy-2 p-6"><h2 className="text-xl font-bold">Phnom Penh</h2><p className="mt-2 text-mute">Free delivery. Same or next day. Pay cash on delivery.</p></div>
-            <div className="rounded-xl border border-navy-line bg-navy-2 p-6"><h2 className="text-xl font-bold">Provinces</h2><p className="mt-2 text-mute">$2 delivery. 1 to 3 days by courier. Pay cash on delivery.</p></div>
+            <div className="rounded-xl border border-navy-line bg-navy-2 p-6"><h2 className="text-xl font-serif font-semibold tracking-tight">Phnom Penh</h2><p className="mt-2 text-mute">Free delivery. Same or next day. Pay cash on delivery.</p></div>
+            <div className="rounded-xl border border-navy-line bg-navy-2 p-6"><h2 className="text-xl font-serif font-semibold tracking-tight">Provinces</h2><p className="mt-2 text-mute">$2 delivery. 1 to 3 days by courier. Pay cash on delivery.</p></div>
           </div>
         </div>
       </section>
       <section className="light py-20">
         <div className="wrap max-w-3xl">
-          <h2 className="mb-8 text-3xl font-extrabold">Questions</h2>
+          <h2 className="mb-8 text-3xl font-serif font-semibold tracking-tight">Questions</h2>
           <div className="divide-y divide-cream-deep rounded-xl border border-cream-deep bg-white">
             {faqs.map(([q, a]) => (
               <details key={q} className="group p-5">

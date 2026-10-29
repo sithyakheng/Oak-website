@@ -4,21 +4,35 @@
 
 html { scroll-behavior: smooth; }
 body { @apply bg-navy text-silver font-sans antialiased; }
-:focus-visible { outline: 2px solid #cfd6e0; outline-offset: 3px; }
+:focus-visible { outline: 2px solid #c08a50; outline-offset: 3px; }
+h1, h2, h3 { @apply font-serif font-semibold tracking-tight; }
 
 @layer components {
-  .btn { @apply inline-flex items-center justify-center rounded-full bg-silver px-7 py-3 text-sm font-semibold text-navy transition hover:opacity-85 disabled:opacity-50; }
-  .btn-ghost { @apply inline-flex items-center justify-center rounded-full border border-silver px-7 py-3 text-sm font-semibold text-silver transition hover:bg-silver hover:text-navy; }
+  .btn { @apply inline-flex items-center justify-center rounded-full bg-oak px-7 py-3 text-sm font-semibold text-navy transition hover:bg-oak-dark hover:text-silver disabled:opacity-50; }
+  .btn-ghost { @apply inline-flex items-center justify-center rounded-full border border-oak px-7 py-3 text-sm font-semibold text-silver transition hover:bg-oak hover:text-navy; }
   .btn-dark { @apply inline-flex items-center justify-center rounded-full bg-navy px-5 py-2.5 text-xs font-semibold text-cream transition hover:opacity-85; }
   .field { @apply w-full rounded-lg border border-navy-line bg-navy-2 px-4 py-3 text-silver placeholder:text-mute; }
   .wrap { @apply mx-auto w-full max-w-6xl px-5; }
   .light { @apply bg-cream text-navy; }
 }
 
+.home-hero {
+  background-image:
+    repeating-linear-gradient(0deg, rgba(255,255,255,0.025) 0, rgba(255,255,255,0.025) 1px, transparent 1px, transparent 6px),
+    radial-gradient(ellipse at center, transparent 35%, rgba(0,0,0,0.2) 100%),
+    radial-gradient(ellipse at 75% 50%, #5a3f28 0, #2b1d14 65%);
+}
+.story-hero {
+  background-image:
+    repeating-linear-gradient(0deg, rgba(255,255,255,0.025) 0, rgba(255,255,255,0.025) 1px, transparent 1px, transparent 6px),
+    radial-gradient(ellipse at center, transparent 35%, rgba(0,0,0,0.2) 100%),
+    linear-gradient(#2b1d14, #2b1d14);
+}
+
 /* Product shapes. Replace with real photos by setting image_url on a product. */
-.shape-jar { position: relative; width: 150px; height: 72px; border-radius: 50% / 40%; background: linear-gradient(#1a2c47, #08111f); border: 1px solid #3b4d68; display: flex; align-items: center; justify-content: center; box-shadow: 0 24px 40px rgba(0,0,0,.55); }
-.shape-cyl { position: relative; width: 64px; height: 160px; border-radius: 8px; background: linear-gradient(90deg, #08111f, #1d3050 45%, #08111f); border: 1px solid #3b4d68; display: flex; align-items: center; justify-content: center; box-shadow: 0 24px 40px rgba(0,0,0,.55); }
-.shape-cyl::before { content: ""; position: absolute; top: -16px; left: -4px; right: -4px; height: 30px; border-radius: 5px; border: 1px solid #3b4d68; background: repeating-linear-gradient(90deg, #0b1626 0 4px, #22385a 4px 7px); }
+.shape-jar { position: relative; width: 150px; height: 72px; border-radius: 50% / 40%; background: linear-gradient(#4a3424, #1c120b); border: 1px solid #7a5a3d; display: flex; align-items: center; justify-content: center; box-shadow: 0 24px 40px rgba(0,0,0,.55); }
+.shape-cyl { position: relative; width: 64px; height: 160px; border-radius: 8px; background: linear-gradient(90deg, #1c120b, #4a3424 45%, #1c120b); border: 1px solid #7a5a3d; display: flex; align-items: center; justify-content: center; box-shadow: 0 24px 40px rgba(0,0,0,.55); }
+.shape-cyl::before { content: ""; position: absolute; top: -16px; left: -4px; right: -4px; height: 30px; border-radius: 5px; border: 1px solid #7a5a3d; background: repeating-linear-gradient(90deg, #2b1d14 0 4px, #5a4230 4px 7px); }
 
 @keyframes marquee { to { transform: translateX(-50%); } }
 .marquee { animation: marquee 32s linear infinite; }

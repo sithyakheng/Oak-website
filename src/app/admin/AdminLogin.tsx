@@ -13,7 +13,7 @@ export default function AdminLogin() {
   }
   return (
     <section className="wrap max-w-sm py-28">
-      <h1 className="text-3xl font-extrabold">Admin</h1>
+      <h1 className="text-3xl font-serif font-semibold tracking-tight">Admin</h1>
       <form onSubmit={submit} className="mt-6 space-y-4">
         <input name="password" type="password" className="field" placeholder="Password" required autoComplete="current-password" />
         {error && <p role="alert" className="text-sm text-red-300">{error}</p>}

@@ -14,7 +14,7 @@ export default function CartView({ products }: { products: Product[] }) {
   if (rows.length === 0)
     return (
       <section className="wrap min-h-[60vh] py-24 text-center">
-        <h1 className="text-4xl font-extrabold">Your cart is empty</h1>
+        <h1 className="text-4xl font-serif font-semibold tracking-tight">Your cart is empty</h1>
         <p className="mt-3 text-mute">Add the clay or the powder to get started.</p>
         <Link href="/shop" className="btn mt-8">Go to shop</Link>
       </section>
@@ -22,7 +22,7 @@ export default function CartView({ products }: { products: Product[] }) {
 
   return (
     <section className="wrap min-h-[60vh] py-16">
-      <h1 className="text-4xl font-extrabold">Your cart</h1>
+      <h1 className="text-4xl font-serif font-semibold tracking-tight">Your cart</h1>
       <div className="mt-10 grid gap-10 md:grid-cols-[1fr_340px]">
         <ul className="space-y-4">
           {rows.map(({ p, qty }) => (

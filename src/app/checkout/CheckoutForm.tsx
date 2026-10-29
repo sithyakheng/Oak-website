@@ -39,14 +39,14 @@ export default function CheckoutForm({ products }: { products: Product[] }) {
   if (rows.length === 0)
     return (
       <section className="wrap min-h-[60vh] py-24 text-center">
-        <h1 className="text-4xl font-extrabold">Nothing to check out</h1>
+        <h1 className="text-4xl font-serif font-semibold tracking-tight">Nothing to check out</h1>
         <Link href="/shop" className="btn mt-8">Go to shop</Link>
       </section>
     );
 
   return (
     <section className="wrap py-16">
-      <h1 className="text-4xl font-extrabold">Checkout</h1>
+      <h1 className="text-4xl font-serif font-semibold tracking-tight">Checkout</h1>
       <div className="mt-10 grid gap-10 md:grid-cols-[1fr_360px]">
         <form onSubmit={submit} className="space-y-4">
           <input name="name" className="field" placeholder="Full name" required minLength={2} autoComplete="name" />

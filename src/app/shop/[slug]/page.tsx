@@ -29,7 +29,7 @@ export default async function ProductPage({ params }: { params: { slug: string }
             <div className="h-[26rem] overflow-hidden rounded-2xl border border-navy-line"><ProductVisual p={p} size="lg" /></div>
             <div>
               <p className="text-sm text-mute">{p.tag}</p>
-              <h1 className="mt-1 text-4xl font-extrabold">{p.name}</h1>
+              <h1 className="mt-1 text-4xl font-serif font-semibold tracking-tight">{p.name}</h1>
               <p className="mt-4 text-3xl font-bold">
                 {money(p.price)}
                 {p.compare_at && <s className="ml-3 text-lg font-normal text-mute">{money(p.compare_at)}</s>}
@@ -51,7 +51,7 @@ export default async function ProductPage({ params }: { params: { slug: string }
       </section>
       <section className="light py-16">
         <div className="wrap">
-          <h2 className="mb-8 text-2xl font-extrabold">More from OAK</h2>
+          <h2 className="mb-8 text-2xl font-serif font-semibold tracking-tight">More from OAK</h2>
           <div className="grid gap-5 md:grid-cols-2">{others.map((o) => <ProductCard key={o.id} p={o} />)}</div>
         </div>
       </section>
