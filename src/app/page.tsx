@@ -5,19 +5,21 @@ import ProductVisual from "@/components/ProductVisual";
 import Meter from "@/components/Meter";
 import OrderButton from "@/components/OrderButton";
 import { Leaf } from "@/components/Logo";
+import { HERO_BANNER } from "@/lib/images";
 
 export const revalidate = 60;
 
 export default async function Home() {
   const products = await getProducts();
   const clay = products.find((p) => p.kind === "clay") ?? products[0];
-  const duo = products.find((p) => p.kind === "duo") ?? products[0];
 
   return (
     <>
-      <section className="home-hero relative overflow-hidden">
-        <Leaf className="pointer-events-none absolute -right-24 -top-10 h-[34rem] w-[34rem] text-oak opacity-[0.06]" stroke={1} />
-        <div className="wrap grid items-center gap-8 py-20 md:grid-cols-2 md:py-28">
+      <section className="relative min-h-[60vh] overflow-hidden md:min-h-[70vh]">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={HERO_BANNER} alt="OAK hair clay and texture powder" fetchPriority="high" className="absolute inset-0 h-full w-full object-cover object-center" />
+        <div className="absolute inset-0 bg-[#2b1d14]/70 md:bg-gradient-to-r md:from-[#2b1d14]/[0.85] md:via-[#2b1d14]/[0.55] md:to-transparent" />
+        <div className="wrap relative z-10 py-20 md:py-28">
           <div>
             <p className="mb-5 inline-block rounded-full border border-navy-line px-4 py-1.5 text-xs">Made for Cambodia</p>
             <h1 className="text-6xl font-serif font-semibold leading-[0.92] tracking-tight md:text-8xl">Hold it<br />down.</h1>
@@ -27,9 +29,6 @@ export default async function Home() {
               <Link href="/story" className="btn-ghost">Our story</Link>
             </div>
             <p className="mt-6 text-xs text-mute">Cash on delivery. We deliver across Cambodia.</p>
-          </div>
-          <div className="relative h-80 md:h-[26rem]">
-            <div className="absolute inset-0 overflow-hidden rounded-2xl border border-navy-line"><ProductVisual p={duo} size="lg" /></div>
           </div>
         </div>
       </section>
