@@ -3,7 +3,7 @@ import { getProducts } from "@/lib/products";
 import ProductCard from "@/components/ProductCard";
 import ProductVisual from "@/components/ProductVisual";
 import Meter from "@/components/Meter";
-import AddToCart from "@/components/AddToCart";
+import OrderButton from "@/components/OrderButton";
 import { Leaf } from "@/components/Logo";
 
 export const revalidate = 60;
@@ -55,7 +55,7 @@ export default async function Home() {
             <p className="mt-4 max-w-md text-mute">No crunch, no stiffness. A firm, natural look you can rework any time of day.</p>
             <div className="my-6 max-w-sm"><Meter hold={clay.hold} shine={clay.shine} /></div>
             <div className="flex gap-3">
-              <AddToCart slug={clay.slug} label="Add the clay" />
+              <OrderButton product={clay} label="Order the clay" />
               <Link href={`/shop/${clay.slug}`} className="btn-ghost">Details</Link>
             </div>
           </div>

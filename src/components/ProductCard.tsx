@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Product } from "@/lib/products";
 import { money } from "@/lib/config";
 import ProductVisual from "./ProductVisual";
-import AddToCart from "./AddToCart";
+import OrderButton from "./OrderButton";
 
 export default function ProductCard({ p }: { p: Product }) {
   return (
@@ -20,7 +20,7 @@ export default function ProductCard({ p }: { p: Product }) {
             {money(p.price)}
             {p.compare_at && <s className="ml-2 text-xs font-normal text-navy/45">{money(p.compare_at)}</s>}
           </span>
-          <AddToCart slug={p.slug} className="btn-dark" />
+          <OrderButton product={p} className="btn-dark" />
         </div>
       </div>
     </div>

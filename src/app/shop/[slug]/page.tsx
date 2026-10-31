@@ -5,7 +5,7 @@ import { getProduct, getProducts } from "@/lib/products";
 import { money } from "@/lib/config";
 import ProductVisual from "@/components/ProductVisual";
 import Meter from "@/components/Meter";
-import AddToCart from "@/components/AddToCart";
+import OrderButton from "@/components/OrderButton";
 import ProductCard from "@/components/ProductCard";
 
 export const revalidate = 60;
@@ -37,8 +37,7 @@ export default async function ProductPage({ params }: { params: { slug: string }
               <p className="mt-5 max-w-md text-mute">{p.description}</p>
               <div className="my-7 max-w-sm"><Meter hold={p.hold} shine={p.shine} /></div>
               <div className="flex flex-wrap gap-3">
-                <AddToCart slug={p.slug} />
-                <Link href="/cart" className="btn-ghost">View cart</Link>
+                <OrderButton product={p} />
               </div>
               <dl className="mt-8 grid max-w-sm grid-cols-2 gap-y-2 border-t border-navy-line pt-5 text-sm">
                 <dt className="text-mute">Size</dt><dd>{p.size}</dd>

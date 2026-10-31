@@ -5,7 +5,7 @@ import { TELEGRAM } from "@/lib/config";
 export const metadata: Metadata = { title: "Delivery & FAQ" };
 
 const faqs: [string, ReactNode][] = [
-  ["How does ordering work?", "Add products to your cart and place your order. We contact you by phone or Telegram to confirm, then ship it."],
+  ["How does ordering work?", "Tap Order on Telegram, send us your name, phone, province and address, and we confirm your order and ship it."],
   ["How do I pay?", "Cash on delivery. You pay the courier when your order arrives."],
   ["Where do you deliver?", "Anywhere in Cambodia, including all 25 provinces and Phnom Penh."],
   ["How much is delivery?", "Free in Phnom Penh. $2 to the provinces."],
