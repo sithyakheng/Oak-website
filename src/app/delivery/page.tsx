@@ -8,7 +8,7 @@ const faqs: [string, ReactNode][] = [
   ["How does ordering work?", "Tap Order on Telegram, send us your name, phone, province and address, and we confirm your order and ship it."],
   ["How do I pay?", "Cash on delivery. You pay the courier when your order arrives."],
   ["Where do you deliver?", "Anywhere in Cambodia, including all 25 provinces and Phnom Penh."],
-  ["How much is delivery?", "Free in Phnom Penh. $2 to the provinces."],
+  ["How much is delivery?", "It depends on where you are. Message us on Telegram with your location and we'll tell you the fee before you order."],
   ["How long does it take?", "Phnom Penh: same or next day. Provinces: usually 1 to 3 days."],
   ["How do I use the clay?", "Warm a small amount between your palms and work it through dry or towel-dried hair. Add more if you need it."],
   ["How do I use the powder?", "Sprinkle a little at the roots, then ruffle and shape. It works alone or under clay."],
@@ -22,8 +22,8 @@ export default function Delivery() {
         <div className="wrap max-w-3xl">
           <h1 className="text-5xl font-serif font-semibold tracking-tight">Delivery & FAQ</h1>
           <div className="mt-10 grid gap-5 md:grid-cols-2">
-            <div className="rounded-xl border border-navy-line bg-navy-2 p-6"><h2 className="text-xl font-serif font-semibold tracking-tight">Phnom Penh</h2><p className="mt-2 text-mute">Free delivery. Same or next day. Pay cash on delivery.</p></div>
-            <div className="rounded-xl border border-navy-line bg-navy-2 p-6"><h2 className="text-xl font-serif font-semibold tracking-tight">Provinces</h2><p className="mt-2 text-mute">$2 delivery. 1 to 3 days by courier. Pay cash on delivery.</p></div>
+            <div className="rounded-xl border border-navy-line bg-navy-2 p-6"><h2 className="text-xl font-serif font-semibold tracking-tight">Phnom Penh</h2><p className="mt-2 text-mute">Delivery fee depends on your location and is confirmed when you order. Pay cash on delivery.</p></div>
+            <div className="rounded-xl border border-navy-line bg-navy-2 p-6"><h2 className="text-xl font-serif font-semibold tracking-tight">Provinces</h2><p className="mt-2 text-mute">Delivery fee depends on your province and is confirmed when you order. 1 to 3 days by courier. Pay cash on delivery.</p></div>
           </div>
         </div>
       </section>

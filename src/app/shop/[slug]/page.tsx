@@ -42,7 +42,7 @@ export default async function ProductPage({ params }: { params: { slug: string }
               <dl className="mt-8 grid max-w-sm grid-cols-2 gap-y-2 border-t border-navy-line pt-5 text-sm">
                 <dt className="text-mute">Size</dt><dd>{p.size}</dd>
                 <dt className="text-mute">Payment</dt><dd>Cash on delivery</dd>
-                <dt className="text-mute">Delivery</dt><dd>Phnom Penh free, provinces $2</dd>
+                <dt className="text-mute">Delivery</dt><dd>Delivery fee depends on your location. Confirmed on Telegram.</dd>
               </dl>
             </div>
           </div>

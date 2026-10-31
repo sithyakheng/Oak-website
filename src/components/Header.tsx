@@ -14,7 +14,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   return (
     <header className="sticky top-0 z-40 border-b border-navy-line bg-navy/90 backdrop-blur">
-      <div className="bg-oak py-1.5 text-center text-xs font-semibold text-navy">Made for Cambodia. Free delivery in Phnom Penh.</div>
+      <div className="bg-oak py-1.5 text-center text-xs font-semibold text-navy">Made for Cambodia. Cash on delivery.</div>
       <div className="wrap flex items-center justify-between py-4">
         <Link href="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
           <Leaf className="h-6 w-6 text-oak" /><Wordmark className="text-base" />
