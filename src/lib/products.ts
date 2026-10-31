@@ -10,13 +10,13 @@ export type Product = {
 export const FALLBACK: Product[] = [
   { id: "1", slug: "oak-clay", name: "OAK Hair Clay", kind: "clay", tag: "Clay", short: "Firm hold, matte finish.",
     description: "A firm, flexible clay with a natural matte finish. No crunch and no stiffness, and you can rework it any time of day.",
-    price: 8, compare_at: null, hold: 80, shine: 15, size: "7 x 7 x 3.5 cm jar", badge: null, image_url: "https://wjlgqgterfgpoefvqmnd.supabase.co/storage/v1/object/public/oak-images/clay%20.png" },
+    price: 12, compare_at: null, hold: 80, shine: 15, size: "7 x 7 x 3.5 cm jar", badge: null, image_url: "https://wjlgqgterfgpoefvqmnd.supabase.co/storage/v1/object/public/oak-images/clay%20.png" },
   { id: "2", slug: "oak-duo", name: "The OAK Duo", kind: "duo", tag: "Clay + powder", short: "The full routine.",
     description: "Clay for hold, powder for lift. Everything you need for a full day of style at a better price.",
-    price: 12, compare_at: 14, hold: 80, shine: 10, size: "Clay jar + 25g powder", badge: "Best value", image_url: "https://wjlgqgterfgpoefvqmnd.supabase.co/storage/v1/object/public/oak-images/texture%20powder%20+%20clay%20bundle%20.png" },
+    price: 15, compare_at: 20, hold: 80, shine: 10, size: "Clay jar + 25g powder", badge: "Best value", image_url: "https://wjlgqgterfgpoefvqmnd.supabase.co/storage/v1/object/public/oak-images/texture%20powder%20+%20clay%20bundle%20.png" },
   { id: "3", slug: "oak-texture-powder", name: "OAK Texture Powder", kind: "powder", tag: "Powder", short: "Instant volume, 25g.",
     description: "Lightweight powder that adds grip and volume at the roots. No residue, and it works on its own or under clay.",
-    price: 6, compare_at: null, hold: 45, shine: 5, size: "25g, 4.6 x 4.6 x 12.5 cm", badge: null, image_url: "https://wjlgqgterfgpoefvqmnd.supabase.co/storage/v1/object/public/oak-images/texture%20powder.png" },
+    price: 8, compare_at: null, hold: 45, shine: 5, size: "25g, 4.6 x 4.6 x 12.5 cm", badge: null, image_url: "https://wjlgqgterfgpoefvqmnd.supabase.co/storage/v1/object/public/oak-images/texture%20powder.png" },
 ];
 
 export async function getProducts(): Promise<Product[]> {
