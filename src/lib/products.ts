@@ -6,6 +6,13 @@ export type Product = {
   hold: number; shine: number; size: string; badge: string | null; image_url: string | null; sort?: number;
 };
 
+export const GALLERY: Record<string, { src: string; alt: string }[]> = {
+  "oak-clay": [
+    { src: "https://wjlgqgterfgpoefvqmnd.supabase.co/storage/v1/object/public/oak-images/Gemini_Generated_Image_mowwsmowwsmowwsm.jfif", alt: "OAK Hair Clay before and after hairstyle" },
+    { src: "https://wjlgqgterfgpoefvqmnd.supabase.co/storage/v1/object/public/oak-images/OAK%20Engineered%20for%20the%20Perfect%20Hold.png", alt: "OAK Hair Clay ingredients and hold details" },
+  ],
+};
+
 // Used when Supabase is not connected yet, and as a safety net.
 export const FALLBACK: Product[] = [
   { id: "1", slug: "oak-clay", name: "OAK Hair Clay", kind: "clay", tag: "Clay", short: "Firm hold, matte finish.",
