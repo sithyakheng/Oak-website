@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { PHONE_DISPLAY, telLink, telegramLink } from "@/lib/config";
+import { TELEGRAM_USERNAME, telegramLink } from "@/lib/config";
 
 export const metadata: Metadata = { title: "Delivery & FAQ" };
 
@@ -12,7 +12,7 @@ const faqs: [string, ReactNode][] = [
   ["How long does it take?", "Phnom Penh: same or next day. Provinces: usually 1 to 3 days."],
   ["How do I use the clay?", "Warm a small amount between your palms and work it through dry or towel-dried hair. Add more if you need it."],
   ["How do I use the powder?", "Sprinkle a little at the roots, then ruffle and shape. It works alone or under clay."],
-  ["Something is wrong with my order.", <>Message us on <a href={telegramLink()} target="_blank" rel="noreferrer" className="underline">Telegram</a> and we’ll fix it.</>],
+  ["Something is wrong with my order.", <>{TELEGRAM_USERNAME ? <>Message us on <a href={telegramLink()} target="_blank" rel="noreferrer" className="underline">Telegram</a> and we’ll fix it.</> : "Message us and we’ll fix it."}</>],
 ];
 
 export default function Delivery() {
@@ -38,7 +38,7 @@ export default function Delivery() {
               </details>
             ))}
           </div>
-          <p className="mt-8 text-navy/70">Still stuck? <a href={telegramLink()} target="_blank" rel="noreferrer" className="font-semibold underline">Contact us on Telegram</a> or call <a href={telLink} className="font-semibold underline">{PHONE_DISPLAY}</a>.</p>
+          {TELEGRAM_USERNAME && <p className="mt-8 text-navy/70">Still stuck? <a href={telegramLink()} target="_blank" rel="noreferrer" className="font-semibold underline">Contact us on Telegram</a>.</p>}
         </div>
       </section>
     </>
