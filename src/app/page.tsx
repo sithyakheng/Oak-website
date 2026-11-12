@@ -6,6 +6,7 @@ import Meter from "@/components/Meter";
 import OrderButton from "@/components/OrderButton";
 import { Leaf } from "@/components/Logo";
 import { HERO_BANNER } from "@/lib/images";
+import { telegramLink } from "@/lib/config";
 
 export const revalidate = 60;
 
@@ -93,6 +94,13 @@ export default async function Home() {
           <h2 className="text-4xl font-serif font-semibold tracking-tight md:text-5xl">Ready to try OAK?</h2>
           <p className="mx-auto mt-4 max-w-md text-mute">Your hair, held down. Order today.</p>
           <Link href="/shop" className="btn mt-8">Shop now</Link>
+        </div>
+      </section>
+
+      <section className="bg-[#2b1d14] py-12 text-center">
+        <div className="wrap">
+          <h2 className="text-2xl font-serif font-semibold tracking-tight">Questions? Message us.</h2>
+          <a href={telegramLink()} target="_blank" rel="noreferrer" className="btn mt-5 inline-block">Chat on Telegram</a>
         </div>
       </section>
     </>

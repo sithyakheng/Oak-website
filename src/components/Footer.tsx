@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { TELEGRAM_USERNAME, telegramLink } from "@/lib/config";
+import { SOCIALS, TELEGRAM_USERNAME, telegramLink } from "@/lib/config";
 import { Leaf, Wordmark } from "./Logo";
 
 export default function Footer() {
@@ -17,7 +17,11 @@ export default function Footer() {
           <Link href="/contact" className="hover:text-silver">Contact</Link>
         </div>
         <div className="flex flex-col gap-2">
-          {TELEGRAM_USERNAME && <a href={telegramLink()} target="_blank" rel="noreferrer" className="hover:text-silver">Telegram: @{TELEGRAM_USERNAME}</a>}
+          <h2 className="mb-1 font-semibold text-silver">Contact</h2>
+          <a href={telegramLink()} target="_blank" rel="noreferrer" className="hover:text-silver">Telegram: @{TELEGRAM_USERNAME}</a>
+          {SOCIALS.map((social) => (
+            <a key={social.name} href={social.url} target="_blank" rel="noreferrer" className="hover:text-silver">{social.name}</a>
+          ))}
           <span>@We Handle With Care</span>
           <span>We deliver across Cambodia.</span>
         </div>
