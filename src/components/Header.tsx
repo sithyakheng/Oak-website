@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
-import { TELEGRAM } from "@/lib/config";
+import { telegramLink } from "@/lib/config";
 import { Leaf, Wordmark } from "./Logo";
 
 const links = [
@@ -23,7 +23,7 @@ export default function Header() {
           {links.map((l) => <Link key={l.href} href={l.href} className="text-silver/80 hover:text-white">{l.label}</Link>)}
         </nav>
         <div className="flex items-center gap-3">
-          <a href={`https://t.me/${TELEGRAM}`} target="_blank" rel="noreferrer" className="btn-ghost !px-5 !py-2 text-xs">Order on Telegram</a>
+          <a href={telegramLink()} target="_blank" rel="noreferrer" className="btn-ghost !px-5 !py-2 text-xs">Order on Telegram</a>
           <button className="md:hidden" aria-label="Menu" aria-expanded={open} onClick={() => setOpen(!open)}>
             <svg width="26" height="26" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" fill="none"><path d={open ? "M5 5l14 14M19 5L5 19" : "M4 7h16M4 12h16M4 17h16"} /></svg>
           </button>
