@@ -26,6 +26,8 @@ export const FALLBACK: Product[] = [
     price: 12, compare_at: null, hold: 45, shine: 5, size: "25g, 4.6 x 4.6 x 12.5 cm", badge: null, image_url: "https://wjlgqgterfgpoefvqmnd.supabase.co/storage/v1/object/public/oak-images/texture%20powder.png" },
 ];
 
+const FALLBACK_BY_SLUG = new Map(FALLBACK.map((product) => [product.slug, product]));
+
 export async function getProducts(): Promise<Product[]> {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL, key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
   if (!url || !key) return FALLBACK;
@@ -33,7 +35,14 @@ export async function getProducts(): Promise<Product[]> {
     const sb = createClient(url, key, { auth: { persistSession: false } });
     const { data, error } = await sb.from("products").select("*").eq("active", true).order("sort");
     if (error || !data || data.length === 0) return FALLBACK;
-    return data.map((p: any) => ({ ...p, price: Number(p.price), compare_at: p.compare_at == null ? null : Number(p.compare_at) }));
+    return data.map((p: any) => {
+      const fallback = FALLBACK_BY_SLUG.get(p.slug);
+      return {
+        ...p,
+        price: fallback?.price ?? Number(p.price),
+        compare_at: fallback ? fallback.compare_at : p.compare_at == null ? null : Number(p.compare_at),
+      };
+    });
   } catch {
     return FALLBACK;
   }
