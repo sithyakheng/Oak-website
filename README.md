@@ -17,6 +17,6 @@ Push to GitHub, import the repo in Vercel, add the same env vars from `.env.exam
 Use a strong ADMIN_PASSWORD. Open `/admin` to see orders and change their status.
 
 ## Editing
-- Products, prices and photos: edit the `products` table in Supabase (set `image_url` for a real photo). Until Supabase is connected, the site uses the fallback list in `src/lib/products.ts`.
+- Products, prices and photos: edit the `products` table in Supabase (set `image_url` for a real photo). Run `supabase/schema.sql` to apply the current seeded prices to existing products. Until Supabase is connected, the site uses the fallback list in `src/lib/products.ts`.
 - Delivery fee and provinces: `src/lib/config.ts`
 - Colors: `tailwind.config.ts`

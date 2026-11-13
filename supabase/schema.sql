@@ -52,7 +52,9 @@ drop policy if exists "public read products" on products;
 create policy "public read products" on products for select using (active = true);
 
 insert into products (slug, name, kind, tag, short, description, price, compare_at, hold, shine, size, badge, sort) values
-('oak-clay', 'OAK Hair Clay', 'clay', 'Clay', 'Firm hold, matte finish.', 'A firm, flexible clay with a natural matte finish. No crunch and no stiffness, and you can rework it any time of day.', 8.00, null, 80, 15, '7 x 7 x 3.5 cm jar', null, 1),
-('oak-duo', 'The OAK Duo', 'duo', 'Clay + powder', 'The full routine.', 'Clay for hold, powder for lift. Everything you need for a full day of style at a better price.', 12.00, 14.00, 80, 10, 'Clay jar + 25g powder', 'Best value', 2),
-('oak-texture-powder', 'OAK Texture Powder', 'powder', 'Powder', 'Instant volume, 25g.', 'Lightweight powder that adds grip and volume at the roots. No residue, and it works on its own or under clay.', 6.00, null, 45, 5, '25g, 4.6 x 4.6 x 12.5 cm', null, 3)
-on conflict (slug) do nothing;
+('oak-clay', 'OAK Hair Clay', 'clay', 'Clay', 'Firm hold, matte finish.', 'A firm, flexible clay with a natural matte finish. No crunch and no stiffness, and you can rework it any time of day.', 15.00, null, 80, 15, '7 x 7 x 3.5 cm jar', null, 1),
+('oak-duo', 'The OAK Duo', 'duo', 'Clay + powder', 'The full routine.', 'Clay for hold, powder for lift. Everything you need for a full day of style at a better price.', 20.00, null, 80, 10, 'Clay jar + 25g powder', 'Best value', 2),
+('oak-texture-powder', 'OAK Texture Powder', 'powder', 'Powder', 'Instant volume, 25g.', 'Lightweight powder that adds grip and volume at the roots. No residue, and it works on its own or under clay.', 12.00, null, 45, 5, '25g, 4.6 x 4.6 x 12.5 cm', null, 3)
+on conflict (slug) do update
+set price = excluded.price,
+    compare_at = excluded.compare_at;
